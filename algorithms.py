@@ -37,3 +37,20 @@ class SortingAlgorithms:
                 draw_tab(draw_info, {i: draw_info.GREEN, i-1: draw_info.RED}, True)
                 yield True
         return tab
+
+    @staticmethod
+    def selection_sort(draw_info, ascending = True):
+        T = draw_info.tab
+        n = len(T)
+        for i in range(n):
+            to_swap = i
+            for idx in range(i + 1, n):
+                if T[idx] < T[to_swap] and ascending:
+                    to_swap = idx
+                elif T[idx] > T[to_swap] and not ascending:
+                    to_swap = idx
+                draw_tab(draw_info, {i: draw_info.GREEN, to_swap: draw_info.RED}, True)
+                T[i], T[to_swap] = T[to_swap], T[i]
+                yield True
+        return T
+

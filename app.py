@@ -77,6 +77,10 @@ def main():
                 sorting_algorithm_name = "Bubble Sort"
 
 
+            elif event.key == pygame.K_s and not sorting:
+                sorting_algorithm = SortingAlgorithms.selection_sort
+                sorting_algorithm_name = "Selection Sort"
+
     pygame.quit()
 
 

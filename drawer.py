@@ -49,7 +49,7 @@ def draw(draw_info, sorting_algorithm_name, ascending):
     controls = draw_info.FONT.render("R - Reset | SPACE - Start Sorting | A - Ascending | D - Descending", 1, draw_info.WHITE)
     draw_info.window.blit(controls, (draw_info.width//2 - controls.get_width()//2,55))
     
-    sorting = draw_info.FONT.render("I - Insertion Sort | B - Bubble Sort", 1, draw_info.WHITE)
+    sorting = draw_info.FONT.render("I - Insertion Sort | B - Bubble Sort | S - Selection Sort", 1, draw_info.WHITE)
     draw_info.window.blit(sorting, (draw_info.width//2 - sorting.get_width()//2,85))
 
     draw_tab(draw_info)
